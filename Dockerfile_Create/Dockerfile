@@ -1,5 +1,5 @@
 #  Ubuntu image
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 # Update and install g++, vim
 RUN apt-get update && \
@@ -11,8 +11,7 @@ WORKDIR /home/ubuntu
 
 COPY ./main.cpp .
 
-# Add mainter
-LABEL maintainer="chai520a@gmail.com"
+VOLUME ["/home/ubuntu"]
 
 # Default command
 CMD ["/bin/bash"]
